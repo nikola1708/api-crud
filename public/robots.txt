@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+import axios from 'axios';
+import { Todo } from '../types/todo';
+
+const BASE_URL = 'https://your-mock-api.com/todos'; // change this to your actual URL
+
+export const getTodos = () => axios.get<Todo[]>(BASE_URL);
+export const addTodo = (todo: Omit<Todo, 'id'>) => axios.post<Todo>(BASE_URL, todo);
+export const updateTodo = (id: number, todo: Partial<Todo>) => axios.put<Todo>(`${BASE_URL}/${id}`, todo);
+export const deleteTodo = (id: number) => axios.delete(`${BASE_URL}/${id}`);

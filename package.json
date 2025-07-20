@@ -13,6 +13,8 @@
     "@types/react-dom": "^19.1.6",
     "axios": "^1.10.0",
     "bootstrap": "^5.3.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0",
@@ -43,5 +45,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikola1708/api-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikola1708/api-crud/issues"
+  },
+  "homepage": "/nikola1708/api-cru",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
