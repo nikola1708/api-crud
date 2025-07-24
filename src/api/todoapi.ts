@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { Todo } from '../types/todo';
 
 const API_URL='https://dummyjson.com/todos';

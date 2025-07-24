@@ -30,6 +30,21 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  async function fetchTodos() {
+    try {
+      const response = await fetch('https://dummyjson.com/todos');
+      const data = await response.json();
+      return data.todos as Todo[];
+    } catch (error) {
+      console.error('Failed to fetch todos:', error);
+    }
+  }
+  React.useEffect(() => {
+    console.log(fetchTodos())
+    
+  }, []);
+      
+
   // STATISTICS
   const total = todos.length;
   const completed = todos.filter(todo => todo.completed).length;
